@@ -1,0 +1,71 @@
+﻿<Window x:Class="_300961820_SiChen_Lab2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_300961820_SiChen_Lab2"
+        mc:Ignorable="d"
+        Title="Si_Chen_Lab2" Height="551.927" Width="800">
+    <Grid Margin="0,0,-6.4,-49.6" RenderTransformOrigin="0.5,0.5" Height="520" VerticalAlignment="Top">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="-0.004"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="393*"/>
+            <ColumnDefinition Width="407*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="dgUser" HorizontalAlignment="Left" Height="246" Margin="28,42,0,0" VerticalAlignment="Top" Width="382" CanUserAddRows="False" IsReadOnly="True" SelectionChanged="DgUser_SelectionChanged" Grid.ColumnSpan="2" Background="#FFF4E3D1"/>
+        <Button x:Name="btnLoad" Content="Load Table" HorizontalAlignment="Left" Margin="28,10,0,0" VerticalAlignment="Top" Width="131" Height="27" Click="Button_Click" Background="#FFFCDDDD"/>
+        <Label x:Name="txtName" Content="" HorizontalAlignment="Left" Margin="43.6,37,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="lblUser" Content="" HorizontalAlignment="Left" Margin="20.2,10,0,0" VerticalAlignment="Top" Grid.Column="1" FontFamily="Showcard Gothic" FontSize="14"/>
+        <ListBox x:Name="ltbBooks" HorizontalAlignment="Left" Height="120" Margin="43.2,42,0,0" VerticalAlignment="Top" Width="131" SelectionChanged="LtbBooks_SelectionChanged" Grid.Column="1"/>
+        <GroupBox Header="Book Details" HorizontalAlignment="Left" Height="293" Margin="209.2,42,0,0" VerticalAlignment="Top" Width="166" Grid.Column="1">
+            <TextBlock x:Name="txtbBook" HorizontalAlignment="Left" Margin="0,10,-1.6,9.2" TextWrapping="Wrap" VerticalAlignment="Center" Height="224" Width="156"/>
+        </GroupBox>
+        <GroupBox Grid.Column="1" Header="Most Recent Read" HorizontalAlignment="Left" Height="128" Margin="44.2,206,0,0" VerticalAlignment="Top" Width="131" RenderTransformOrigin="0.5,0.5">
+            <GroupBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.471"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </GroupBox.RenderTransform>
+            <TextBlock x:Name="txtbSnapshot" HorizontalAlignment="Left" Margin="0,10,-3.4,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="95" Width="121"/>
+
+        </GroupBox>
+        <Label Content="User ID:" HorizontalAlignment="Left" Margin="28,345,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtUserId" HorizontalAlignment="Left" Height="23" Margin="116,348,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="User Name:" HorizontalAlignment="Left" Margin="28,384,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtUsernaem" HorizontalAlignment="Left" Height="23" Margin="116,388,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Email:" HorizontalAlignment="Left" Margin="28,424,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="116,428,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnAddUser" Content="Add User" HorizontalAlignment="Left" Margin="28,473,0,0" VerticalAlignment="Top" Width="208" Height="34" Background="#FFFCDDDD" Click="BtnAddUser_Click"/>
+        <Label Content="Book Title:" HorizontalAlignment="Left" Margin="276,345,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtBookTitle" HorizontalAlignment="Left" Height="23" Margin="375,348,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <Label Content="ISBN:" HorizontalAlignment="Left" Margin="276,384,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtISBN" HorizontalAlignment="Left" Height="23" Margin="375,388,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <Label Content="Author:" HorizontalAlignment="Left" Margin="121.2,384,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBox x:Name="txtAuthor" HorizontalAlignment="Left" Height="23" Margin="224.2,388,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <Label Content="Pages:" HorizontalAlignment="Left" Margin="121.2,345,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBox x:Name="txtPages" HorizontalAlignment="Left" Height="23" Margin="224.2,348,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <Label Content="Last Time Open:" HorizontalAlignment="Left" Margin="276,424,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtLastOpenYear" HorizontalAlignment="Left" Height="22" Margin="375,428,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" Grid.ColumnSpan="2"  GotFocus="TxtLastYear_GotFocus" Text="YYYY" LostFocus="TxtLastYear_LostFocus"/>
+        <Label Content="Last Page Count:" HorizontalAlignment="Left" Margin="121.2,424,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBox x:Name="txtLastPage" HorizontalAlignment="Left" Height="23" Margin="224.2,428,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <Button x:Name="btnEditBook" Content="Add or Update Book into Your Bookshelf" HorizontalAlignment="Left" Margin="276,473,0,0" VerticalAlignment="Top" Width="461" Grid.ColumnSpan="2" Height="34" Background="#FFFCDDDD" Click="BtnEditBook_Click"/>
+        <Button x:Name="btnDeleteUser" Content="Delete Selected User" HorizontalAlignment="Left" Margin="28,304,0,0" VerticalAlignment="Top" Width="208" Height="31" Background="#FFFCDDDD" Click="BtnDeleteUser_Click"/>
+        <Button x:Name="btnDeleteBook" Content="Delete Selected Book" Grid.Column="1" HorizontalAlignment="Left" Margin="43.2,167,0,0" VerticalAlignment="Top" Width="131" Height="33" Background="#FFFCDDDD" Click="BtnDeleteBook_Click"/>
+        <Label Content="-" Grid.Column="1" HorizontalAlignment="Left" Margin="17.2,424,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtLastOpenMonth" HorizontalAlignment="Left" Height="22" Margin="30.2,428,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35"  GotFocus="TxtLastMonth_GotFocus" Text="MM" LostFocus="TxtLastMonth_LostFocus" Grid.Column="1"/>
+        <Label Content="-" Grid.Column="1" HorizontalAlignment="Left" Margin="61.2,424,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtLastOpenDay" HorizontalAlignment="Left" Height="22" Margin="75.2,428,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="27"  GotFocus="TxtLastDay_GotFocus" Text="DD" LostFocus="TxtLastDay_LostFocus" Grid.Column="1"/>
+
+
+    </Grid>
+</Window>
